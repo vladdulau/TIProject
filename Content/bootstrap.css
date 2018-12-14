@@ -4811,13 +4811,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
   background-color: #ffffff;
 }
 
-.label {
+.labelTitle {
   display: inline;
   padding: .2em .6em .3em;
-  font-size: 75%;
+  font-size: 35px;
   font-weight: bold;
   line-height: 1;
-  color: #ffffff;
+  color: grey;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -4933,7 +4933,7 @@ a.list-group-item.active > .badge,
 .jumbotron {
   padding: 30px;
   margin-bottom: 30px;
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;

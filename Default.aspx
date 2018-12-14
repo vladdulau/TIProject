@@ -6,10 +6,10 @@
             <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                 <ContentTemplate>
                     <asp:Image ID="Image1" runat="server" />
-                    <div class ="label">
+                    <div class ="labelTitle">
+                        <asp:Label ID="LabelDefaultMessage" runat="server" Text="Aplicatie salarizare"></asp:Label>
                         <asp:Timer ID="Timer2" runat="server" Interval="2000" OnTick="Timer2_Tick">
                         </asp:Timer>
-                        <asp:Label ID="LabelDefaultMessage" runat="server" Text="Aplicatie salarizare"></asp:Label>
                     </div>
                   <asp:Label ID="Label1" runat="server" Text="Ora"></asp:Label>
                 </ContentTemplate>
