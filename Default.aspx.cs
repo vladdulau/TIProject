@@ -9,6 +9,8 @@ public partial class _Default : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Session["parola"] = null;
+
         if (!IsPostBack)
         {
             Label1.Text = DateTime.Now.ToString();
