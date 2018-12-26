@@ -36,6 +36,7 @@ summary {
   display: block;
 }
 
+
 audio,
 canvas,
 video {
@@ -64,6 +65,12 @@ body {
 a:focus {
   outline: thin dotted;
 }
+
+design-table{
+    border-collapse:collapse;
+    width:100%;
+}
+
 
 a:active,
 a:hover {

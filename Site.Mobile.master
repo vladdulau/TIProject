@@ -15,7 +15,7 @@
         <h1>Mobile Master Page</h1>
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
         <section class="content-wrapper main-content clear-fix">
-            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+            <asp:ContentPlaceHolder runat="server" ID="body" />
         </section>
         <friendlyUrls:ViewSwitcher ID="ViewSwitcher1" runat="server" />
     </div>

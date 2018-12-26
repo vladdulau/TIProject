@@ -1,21 +1,30 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ActualizareDate.aspx.cs" Inherits="ActualizareDate" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="ActualizareDate.aspx.cs" Inherits="ActualizareDate" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-
-        <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
-        </asp:GridView>
-
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
-
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="Server">
+    <div class="search-view">
+        <div class="row">
+            <asp:TextBox ID="textCauta" runat="server" BorderStyle="Inset"></asp:TextBox>
+            <asp:Button ID="buttonCauta" runat="server" Text="Cauta" BorderStyle="Outset" OnClick="buttonCauta_Click" />
+        </div>
     </div>
-    </form>
-</body>
-</html>
+    <div class="tabel-salarii">
+        <asp:GridView ID="gridSalarii" AutoGenerateColumns="True" AllowPaging="True" BorderStyle="Inset" PageSize="6" runat="server" Width="700px" DataKeyNames="NR_CRT" OnSelectedIndexChanged="gridSalarii_SelectedIndexChanged">
+            <Columns>
+                <asp:CommandField ShowSelectButton="true" />
+                <asp:BoundField DataField="NR_CRT" HeaderText="Nr. Crt" SortExpression="NR_CRT"/>
+                <asp:BoundField DataField="NUME" HeaderText="Nume" SortExpression="NUME" />
+                <asp:BoundField DataField="PRENUME" HeaderText="Prenume" SortExpression="PRENUME" />
+                <asp:BoundField DataField="FUNCTIE" HeaderText="Functie" SortExpression="FUNCTIE" />
+            </Columns>
+            <HeaderStyle BackColor="DarkGray" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
+            <RowStyle BackColor="White" />
+        </asp:GridView>
+    </div>
+
+    <div class="actualizare-campuri">
+    
+    </div>
+
+</asp:Content>
+
