@@ -59,7 +59,7 @@
                                     <ul class="dropdown-menu">
                                       <li><a href="ActualizareDate.aspx">Actualizare Date</a></li>
                                       <li><a href="AdaugareAngajat.aspx">Adaugare Angajat</a></li>
-                                      <li><a href="#">Stergere Angajat</a></li>
+                                      <li><a href="StergereAngajat.aspx">Stergere Angajat</a></li>
                                     </ul>
                          </li>
 
