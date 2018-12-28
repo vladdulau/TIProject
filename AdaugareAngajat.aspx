@@ -26,7 +26,6 @@
     <p></p>
     <p></p>
     <div class="actualizare-campuri">
-        <div class="aranjare-campuri">
             <div class="row">
                 <asp:Label ID="numeLabel" runat="server" Text="Nume "></asp:Label>
                 <asp:TextBox ID="NUME" runat="server" BorderStyle="Ridge" Width="200px"></asp:TextBox>
@@ -35,7 +34,6 @@
                 <asp:Label ID="functieLabel" runat="server" Text="Functie"></asp:Label>
                 <asp:TextBox ID="FUNCTIE" runat="server" BorderStyle="Ridge"  Width="200px"></asp:TextBox>
             </div>
-        </div>
         <p></p>
          <p></p>
         <div class="row">

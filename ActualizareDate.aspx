@@ -26,20 +26,18 @@
     <p></p>
     <p></p>
     <div class="actualizare-campuri">
-        <div class="aranjare-campuri">
-            <div class="row">
-                <asp:Label ID="nrCrtLabel" runat="server" Text="Nr. Crt"></asp:Label>
-                <asp:TextBox ID="NR_CRT" runat="server" BorderStyle="Ridge" Enabled="false" Width="100px"></asp:TextBox>
-                <asp:Label ID="numeLabel" runat="server" Text="Nume "></asp:Label>
-                <asp:TextBox ID="NUME" runat="server" BorderStyle="Ridge" Enabled="true" Width="200px"></asp:TextBox>
-                <asp:Label ID="prenumeLabel" runat="server" Text="Prenume"></asp:Label>
-                <asp:TextBox ID="PRENUME" runat="server" BorderStyle="Ridge" Enabled="true" Width="200px"></asp:TextBox>
-                <asp:Label ID="functieLabel" runat="server" Text="Functie"></asp:Label>
-                <asp:TextBox ID="FUNCTIE" runat="server" BorderStyle="Ridge" Enabled="true" Width="200px"></asp:TextBox>
-            </div>
+        <div class="row">
+            <asp:Label ID="nrCrtLabel" runat="server" Text="Nr. Crt"></asp:Label>
+            <asp:TextBox ID="NR_CRT" runat="server" BorderStyle="Ridge" Enabled="false" Width="100px"></asp:TextBox>
+            <asp:Label ID="numeLabel" runat="server" Text="Nume "></asp:Label>
+            <asp:TextBox ID="NUME" runat="server" BorderStyle="Ridge" Enabled="true" Width="200px"></asp:TextBox>
+            <asp:Label ID="prenumeLabel" runat="server" Text="Prenume"></asp:Label>
+            <asp:TextBox ID="PRENUME" runat="server" BorderStyle="Ridge" Enabled="true" Width="200px"></asp:TextBox>
+            <asp:Label ID="functieLabel" runat="server" Text="Functie"></asp:Label>
+            <asp:TextBox ID="FUNCTIE" runat="server" BorderStyle="Ridge" Enabled="true" Width="200px"></asp:TextBox>
         </div>
         <p></p>
-         <p></p>
+        <p></p>
         <div class="row">
             <asp:Label ID="salarBazaLabel" runat="server" Text="Salar baza"></asp:Label>
             <asp:TextBox ID="SALAR_BAZA" runat="server" BorderStyle="Ridge" Enabled="true" Width="100px"></asp:TextBox>
@@ -51,7 +49,7 @@
             <asp:TextBox ID="TOTAL_BRUT" runat="server" BorderStyle="Ridge" Enabled="false" Width="100px"></asp:TextBox>
         </div>
         <p></p>
-    <p></p>
+        <p></p>
         <div class="row">
             <asp:Label ID="brutImpozitabilLabel" runat="server" Text="Brut impozitabil"></asp:Label>
             <asp:TextBox ID="BRUT_IMPOZITABIL" runat="server" BorderStyle="Ridge" Enabled="false" Width="100px"></asp:TextBox>
@@ -63,7 +61,7 @@
             <asp:TextBox ID="CASS" runat="server" BorderStyle="Ridge" Enabled="false" Width="100px"></asp:TextBox>
         </div>
         <p></p>
-    <p></p>
+        <p></p>
         <div class="row">
             <asp:Label ID="retineriLabel" runat="server" Text="Retineri"></asp:Label>
             <asp:TextBox ID="RETINERI" runat="server" BorderStyle="Ridge" Enabled="true" Width="100px"></asp:TextBox>
@@ -71,7 +69,7 @@
             <asp:TextBox ID="VIRAT_CARD" runat="server" BorderStyle="Ridge" Enabled="false" Width="100px"></asp:TextBox>
         </div>
         <p></p>
-    <p></p>
+        <p></p>
         <div class="search-view">
             <div class="row">
                 <asp:Button ID="btnSalveaza" runat="server" Text="Salveaza" BorderStyle="Outset" OnClick="buttonSalveaza_Click" />
