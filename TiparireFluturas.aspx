@@ -34,9 +34,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="actualizare-raport-fluturasi">
-                <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" DisplayStatusbar="False" DisplayToolbar="False" EnableToolTips="False" HasToggleGroupTreeButton="False" HasToggleParameterPanelButton="False" Height="50px" SeparatePages="False" ToolPanelView="None" Width="350px" />
-            </div>
+            <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" DisplayStatusbar="False" DisplayToolbar="False" EnableToolTips="False" HasToggleGroupTreeButton="False" HasToggleParameterPanelButton="False" Height="50px" SeparatePages="False" ToolPanelView="None" Width="350px" />
         </div>
     </div>
 </asp:Content>

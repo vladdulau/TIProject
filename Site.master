@@ -67,7 +67,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tiparire Date
                                 <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                      <li><a href ="#">Tiparire Stat de Plata</a></li>
+                                      <li><a href ="TiparireStatPlata.aspx">Tiparire Stat de Plata</a></li>
                                      <li><a href ="TiparireFluturas.aspx">Tiparire Fluturas</a></li>
                                     </ul>
                          </li>
