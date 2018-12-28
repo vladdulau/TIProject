@@ -9,14 +9,14 @@
     <div class="search-view">
         <div class="row">
             <asp:TextBox ID="textCauta" runat="server" BorderStyle="Inset"></asp:TextBox>
-            <asp:Button ID="buttonCauta" runat="server" Text="Cauta" BorderStyle="Outset" />
-            <asp:Button ID="buttonRenunta" runat="server" Text="Renunta" BorderStyle="Outset" />
+            <asp:Button ID="buttonCauta" runat="server" Text="Cauta" BorderStyle="Outset" OnClick="buttonCauta_Click" />
+            <asp:Button ID="buttonRenunta" runat="server" Text="Renunta" BorderStyle="Outset" OnClick="buttonRenunta_Click" />
         </div>
     </div>
     <div class="row">
         <div class="actualizare-tabel-tiparire">
             <div class="tabel-salarii">
-                <asp:GridView ID="gridSalarii" AutoGenerateColumns="True" AllowPaging="True" BorderStyle="Inset" PageSize="6" runat="server" Width="700px" DataKeyNames="NR_CRT">
+                <asp:GridView ID="gridSalarii" AutoGenerateColumns="True" AllowPaging="True" BorderStyle="Inset" PageSize="6" runat="server" Width="700px" DataKeyNames="NR_CRT" OnSelectedIndexChanging="gridSalarii_SelectedIndexChanging">
                     <Columns>
                         <asp:CommandField ShowSelectButton="true" />
                     </Columns>

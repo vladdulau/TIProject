@@ -63,6 +63,7 @@ public partial class TiparireFluturas : System.Web.UI.Page
 
     protected void BTN_EXPORTA_Click(object sender, EventArgs e)
     {
+
         try
         {
             if (conn == null || conn.State.Equals(ConnectionState.Closed))
@@ -89,6 +90,129 @@ public partial class TiparireFluturas : System.Web.UI.Page
             string numeRaport = NUME_RAPORT.Text == null ? "fluturas-" : NUME_RAPORT.Text;
             raport.ExportToHttpResponse(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, Response, true, numeRaport);
 
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.Message);
+        }
+        finally
+        {
+            conn.Close();
+        }
+    }
+
+    protected void buttonRenunta_Click(object sender, EventArgs e)
+    {
+        NUME_RAPORT.Text = "";
+        textCauta.Text = "";
+
+        DBQuery.Text = "SELECT NR_CRT, NUME, PRENUME, FUNCTIE, SALAR_BAZA, SPOR, PREMII_BRUTE, TOTAL_BRUT, BRUT_IMPOZITABIL, CAS, CASS, IMPOZIT, RETINERI, VIRAT_CARD FROM ANGAJATI ORDER BY NR_CRT";
+
+        try
+        {
+            if (conn == null || conn.State.Equals(ConnectionState.Closed))
+            {
+                conn = new OracleConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
+                conn.Open();
+
+                command = new OracleCommand(DBQuery.Text, conn);
+                dataAdapter = new OracleDataAdapter(command);
+                dataSet = new DataSet();
+
+                dataAdapter.Fill(dataSet, "ANGAJATI");
+                gridSalarii.DataSource = dataSet.Tables["ANGAJATI"].DefaultView;
+                gridSalarii.DataBind();
+
+                var raport = new ReportDocument();
+
+                var path = Server.MapPath("CrystalReport2.rpt");
+                raport.Load(path);
+                raport.SetDataSource(dataSet.Tables["ANGAJATI"]);
+                CrystalReportViewer1.ReportSource = raport;
+
+                string numeRaport = NUME_RAPORT.Text == null ? "fluturas-" : NUME_RAPORT.Text;
+                raport.ExportToHttpResponse(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, Response, true, numeRaport);
+
+            }
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.Message);
+        }
+        finally
+        {
+            conn.Close();
+        }
+    }
+
+    protected void buttonCauta_Click(object sender, EventArgs e)
+    {
+        var searchText = textCauta.Text;
+
+        DBQuery.Text = "SELECT NR_CRT, NUME, PRENUME, FUNCTIE, SALAR_BAZA, SPOR, PREMII_BRUTE, TOTAL_BRUT, BRUT_IMPOZITABIL, CAS, CASS, IMPOZIT, RETINERI, VIRAT_CARD FROM ANGAJATI WHERE LOWER(NUME) LIKE LOWER(\'%" + searchText + "%\') OR LOWER(PRENUME) LIKE LOWER(\'%" + searchText + "%\') OR LOWER(FUNCTIE) LIKE LOWER(\'%" + searchText + "%\')";
+        try
+        {
+            if (conn == null || conn.State.Equals(ConnectionState.Closed))
+            {
+                conn = new OracleConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
+                conn.Open();
+
+                command = new OracleCommand(DBQuery.Text, conn);
+                dataAdapter = new OracleDataAdapter(command);
+                dataSet = new DataSet();
+
+                dataAdapter.Fill(dataSet, "ANGAJATI");
+                gridSalarii.DataSource = dataSet.Tables["ANGAJATI"].DefaultView;
+                gridSalarii.DataBind();
+
+                var raport = new ReportDocument();
+
+                var path = Server.MapPath("CrystalReport2.rpt");
+                raport.Load(path);
+                raport.SetDataSource(dataSet.Tables["ANGAJATI"]);
+                CrystalReportViewer1.ReportSource = raport;
+
+            }
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.Message);
+        }
+        finally
+        {
+            conn.Close();
+        }
+    }
+
+    protected void gridSalarii_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+    {
+        int nr_crt = Int32.Parse(gridSalarii.Rows[e.NewSelectedIndex].Cells[1].Text);
+
+        DBQuery.Text = "SELECT NR_CRT, NUME, PRENUME, FUNCTIE, SALAR_BAZA, SPOR, PREMII_BRUTE, TOTAL_BRUT, BRUT_IMPOZITABIL, CAS, CASS, IMPOZIT, RETINERI, VIRAT_CARD FROM ANGAJATI WHERE  NR_CRT="+nr_crt+ "ORDER BY NR_CRT";
+
+        try
+        {
+            if (conn == null || conn.State.Equals(ConnectionState.Closed))
+            {
+                conn = new OracleConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
+                conn.Open();
+
+                command = new OracleCommand(DBQuery.Text, conn);
+                dataAdapter = new OracleDataAdapter(command);
+                dataSet = new DataSet();
+
+                dataAdapter.Fill(dataSet, "ANGAJATI");
+                gridSalarii.DataSource = dataSet.Tables["ANGAJATI"].DefaultView;
+                gridSalarii.DataBind();
+
+                var raport = new ReportDocument();
+
+                var path = Server.MapPath("CrystalReport2.rpt");
+                raport.Load(path);
+                raport.SetDataSource(dataSet.Tables["ANGAJATI"]);
+                CrystalReportViewer1.ReportSource = raport;
+
+            }
         }
         catch (Exception ex)
         {

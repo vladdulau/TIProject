@@ -68,7 +68,7 @@
                                 <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                       <li><a href ="#">Tiparire Stat de Plata</a></li>
-                                     <li><a href ="#">Tiparire Fluturas</a></li>
+                                     <li><a href ="TiparireFluturas.aspx">Tiparire Fluturas</a></li>
                                     </ul>
                          </li>
                        <li><a href="ActualizareTaxe.aspx">Actualizare Taxe</a></li>
