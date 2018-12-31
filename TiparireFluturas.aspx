@@ -17,9 +17,6 @@
         <div class="actualizare-tabel-tiparire">
             <div class="tabel-salarii">
                 <asp:GridView ID="gridSalarii" AutoGenerateColumns="True" AllowPaging="True" BorderStyle="Inset" PageSize="6" runat="server" Width="700px" DataKeyNames="NR_CRT" OnSelectedIndexChanging="gridSalarii_SelectedIndexChanging">
-                    <Columns>
-                        <asp:CommandField ShowSelectButton="true" />
-                    </Columns>
                     <HeaderStyle BackColor="DarkGray" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
                     <RowStyle BackColor="White" />
                 </asp:GridView>
@@ -30,7 +27,7 @@
             <div class="row">
                 <asp:Label ID="Label1" runat="server" Text="Raport: &amp;nbsp&amp;nbsp&amp;nbsp" Font-Size="Smaller"></asp:Label>
                 <asp:TextBox ID="NUME_RAPORT" runat="server" BorderStyle="Inset" Width="200px" CssClass="actualizare-field"></asp:TextBox>
-                <asp:Button ID="BTN_EXPORTA" runat="server" Text="Exporta PDF" Height="37px" Width="141px" OnClick="BTN_EXPORTA_Click" />
+                <asp:Button ID="BTN_EXPORTA" runat="server" Text="Exporta Fluturas" Height="37px" Width="141px" OnClick="BTN_EXPORTA_Click" />
             </div>
         </div>
         <div class="row">

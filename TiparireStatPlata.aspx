@@ -9,7 +9,7 @@
         <div class="row">
             <asp:Label ID="label1" runat="server" Text="Nume raport"></asp:Label>
             <asp:TextBox ID="textRaport" runat="server" BorderStyle="Inset" ></asp:TextBox>
-            <asp:Button ID="buttonExporta" runat="server" Text="Cauta" BorderStyle="Outset" OnClick="buttonExporta_Click" />
+            <asp:Button ID="buttonExporta" runat="server" Text="Exporta Stat Plata" BorderStyle="Outset" OnClick="buttonExporta_Click" />
         </div>
     </div>
 
