@@ -16,7 +16,7 @@
     <div class="row">
         <div class="actualizare-tabel-tiparire">
             <div class="tabel-salarii">
-                <asp:GridView ID="gridSalarii" AutoGenerateColumns="True" AllowPaging="True" BorderStyle="Inset" PageSize="6" runat="server" Width="700px" DataKeyNames="NR_CRT" OnSelectedIndexChanging="gridSalarii_SelectedIndexChanging">
+                <asp:GridView ID="gridSalarii" AutoGenerateColumns="True" AllowPaging="false" BorderStyle="Inset" PageSize="14" runat="server" Width="700px" DataKeyNames="NR_CRT" OnSelectedIndexChanging="gridSalarii_SelectedIndexChanging" OnPageIndexChanging="gridSalarii_PageIndexChanging1">
                     <HeaderStyle BackColor="DarkGray" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
                     <RowStyle BackColor="White" />
                 </asp:GridView>

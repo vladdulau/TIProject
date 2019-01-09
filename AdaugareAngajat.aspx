@@ -12,10 +12,7 @@
     <div class="tabel-salarii">
         <asp:GridView ID="gridSalarii" AutoGenerateColumns="True" AllowPaging="True" BorderStyle="Inset" PageSize="6" runat="server" Width="700px" DataKeyNames="NR_CRT" OnPageIndexChanging="gridSalarii_PageIndexChanging">
             <Columns>
-                <asp:BoundField DataField="NR_CRT" HeaderText="Nr. Crt" SortExpression="NR_CRT" />
-                <asp:BoundField DataField="NUME" HeaderText="Nume" SortExpression="NUME" />
-                <asp:BoundField DataField="PRENUME" HeaderText="Prenume" SortExpression="PRENUME" />
-                <asp:BoundField DataField="FUNCTIE" HeaderText="Functie" SortExpression="FUNCTIE" />
+               
             </Columns>
             <HeaderStyle BackColor="DarkGray" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
             <RowStyle BackColor="White" />

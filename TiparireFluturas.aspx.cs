@@ -59,7 +59,34 @@ public partial class TiparireFluturas : System.Web.UI.Page
         }
     }
 
+    protected void gridSalarii_PageIndexChanging1(object sender, GridViewPageEventArgs e)
+    {
 
+        try
+        {
+            if (conn == null || conn.State.Equals(ConnectionState.Closed))
+            {
+                conn = new OracleConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
+                conn.Open();
+                command = new OracleCommand(query, conn);
+                dataAdapter = new OracleDataAdapter(command);
+                dataSet = new DataSet();
+
+                dataAdapter.Fill(dataSet, "Angajati");
+                this.gridSalarii.DataSource = dataSet.Tables["Angajati"].DefaultView;
+                this.gridSalarii.PageIndex = e.NewPageIndex;
+                gridSalarii.DataBind();
+            }
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.Message);
+        }
+        finally
+        {
+            conn.Close();
+        }
+    }
 
     protected void BTN_EXPORTA_Click(object sender, EventArgs e)
     {
